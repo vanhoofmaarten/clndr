@@ -54,7 +54,7 @@ export default {
         const month = formatISO(startOfMonth(date));
         const isoWeek = getISOWeek(date);
 
-        const initalArray = acc?.[year]?.[month]?.[isoWeek];
+        const initalArray = acc && acc[year] && acc[year][month] && acc[year][month][isoWeek];
 
         return defaultsDeep(acc, {
           [year]: {
